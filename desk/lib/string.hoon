@@ -120,7 +120,14 @@
   =/  r   (slag (lent nedl) nr)
   [l=l n=n r=r]
 ::
-::++  replace
+++  replace
+  |=  [bit=tape bot=tape =tape]
+  ^-  ^tape
+  |-
+  =/  off  (find bit tape)
+  ?~  off  tape
+  =/  clr  (oust [(need off) (lent bit)] tape)
+  $(tape :(weld (scag (need off) clr) bot (slag (need off) clr)))
 ::
 ++  split
   |=  [sep=tape =tape]
