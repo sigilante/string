@@ -144,7 +144,7 @@
 ::
 ++  rfind  |=([seq=tape =tape] ?~((find seq (flop tape)) ~ `(dec (sub (lent tape) (need (find seq (flop tape)))))))
 ::
-++  title  |=(=tape (link " " (turn (split " " (turn tape lower)) capitalize)))
+++  title  |=(=tape (link " " (turn (split " " (zing (turn tape (cork trip lower)))) capitalize)))
 ::
 ++  zfill
   |=  [=tape wid=@ud]
