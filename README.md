@@ -548,7 +548,7 @@ Tests whether a tape is a valid `@ta` label.
 #### Source
 
 ```hoon
-is-cord
+is-knot
 ```
 
 #### Produces
