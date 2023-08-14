@@ -1,32 +1,32 @@
   ::  /lib/string
 ::::  ~lagrev-nocfep
-::    Version ~2023.8.10
+::    Version ~2023.8.14
 ::
 ::    A string library supporting common operations for mortals.
 ::    Gates assume tape input unless suffixed with `-c`.
 ::
 |%
-++  alphabet        `tape`(weld (gulf 65 90) (gulf 97 122))
-++  alpha-lower     `tape`(slag 26 alphabet)
-++  alpha-upper     `tape`(scag 26 alphabet)
-++  digits          `tape`(gulf 48 57)
-++  alpha-digits    `tape`(weld alphabet digits)
-++  hexdigits       `tape`:(weld digits (gulf 65 70) (gulf 97 102))
-++  octdigits       `tape`(gulf 48 55)
-++  punctuation     `tape`:(weld (gulf 32 47) (gulf 58 64) (gulf 91 96) (gulf 123 126))
-++  whitespace      `tape`:(weld " " ~['\0a'] ~['\09'])
-++  ascii           `tape`:(weld alphabet digits punctuation whitespace)
+++  alphabet        ^~  `tape`(weld (gulf 65 90) (gulf 97 122))
+++  alpha-lower     ^~  `tape`(slag 26 alphabet)
+++  alpha-upper     ^~  `tape`(scag 26 alphabet)
+++  digits          ^~  `tape`(gulf 48 57)
+++  alpha-digits    ^~  `tape`(weld alphabet digits)
+++  hexdigits       ^~  `tape`:(weld digits (gulf 65 70) (gulf 97 102))
+++  octdigits       ^~  `tape`(gulf 48 55)
+++  punctuation     ^~  `tape`:(weld (gulf 32 47) (gulf 58 64) (gulf 91 96) (gulf 123 126))
+++  whitespace      ^~  `tape`:(weld " " ~['\0a'] ~['\09'])
+++  ascii           ^~  `tape`:(weld alphabet digits punctuation whitespace)
 ::  Utility sets
-++  set-alphabet      (~(gas in *(set @tD)) alphabet)
-++  set-alpha-lower   (~(gas in *(set @tD)) alpha-lower)
-++  set-alpha-upper   (~(gas in *(set @tD)) alpha-upper)
-++  set-digits        (~(gas in *(set @tD)) digits)
-++  set-alpha-digits  (~(gas in *(set @tD)) alpha-digits)
-++  set-hexdigits     (~(gas in *(set @tD)) hexdigits)
-++  set-octdigits     (~(gas in *(set @tD)) octdigits)
-++  set-punctuation   (~(gas in *(set @tD)) punctuation)
-++  set-whitespace    (~(gas in *(set @tD)) whitespace)
-++  set-ascii         (~(gas in *(set @tD)) ascii)
+++  set-alphabet      ^~  (~(gas in *(set @tD)) alphabet)
+++  set-alpha-lower   ^~  (~(gas in *(set @tD)) alpha-lower)
+++  set-alpha-upper   ^~  (~(gas in *(set @tD)) alpha-upper)
+++  set-digits        ^~  (~(gas in *(set @tD)) digits)
+++  set-alpha-digits  ^~  (~(gas in *(set @tD)) alpha-digits)
+++  set-hexdigits     ^~  (~(gas in *(set @tD)) hexdigits)
+++  set-octdigits     ^~  (~(gas in *(set @tD)) octdigits)
+++  set-punctuation   ^~  (~(gas in *(set @tD)) punctuation)
+++  set-whitespace    ^~  (~(gas in *(set @tD)) whitespace)
+++  set-ascii         ^~  (~(gas in *(set @tD)) ascii)
 ::
 ++  is-alpha    |=(=tape =(~ (~(dif in (~(gas in *(set @tD)) tape)) set-alphabet)))
 ++  is-lower    |=(=tape =(~ (~(dif in (~(gas in *(set @tD)) tape)) set-alpha-lower)))
@@ -37,10 +37,44 @@
 ++  is-octal    |=(=tape =(~ (~(dif in (~(gas in *(set @tD)) tape)) set-octdigits)))
 ++  is-ascii    |=(=tape =(~ (~(dif in (~(gas in *(set @tD)) tape)) set-ascii)))
 ++  is-decimal  is-digit
-++  is-term     |=(=tape ((sane %tas) (crip tape)))
 ++  is-numeric  is-digit
 ++  is-space    |=(=tape =(~ (~(dif in (~(gas in *(set @tD)) tape)) set-whitespace)))
 ++  is-title    |=(=tape =((title tape) tape))
+::
+++  is-knot     |=(=tape ((sane %ta) (crip tape)))
+++  is-tas      is-term
+++  is-ta       is-knot
+++  is-term     |=(=tape ((sane %tas) (crip tape)))
+++  is-uc
+  |=  =tape
+  ^-  ?
+  =/  p  (bisk:so [[1 1] tape])
+  &(=(+((lent tape)) +>+<+:p) =(%uc +>-<:p))
+++  is-ud
+  |=  =tape
+  ^-  ?
+  =/  p  (bisk:so [[1 1] tape])
+  &(=(+((lent tape)) +>+<+:p) =(%ud +>-<:p))
+++  is-ui
+  |=  =tape
+  ^-  ?
+  =/  p  (bisk:so [[1 1] tape])
+  &(=(+((lent tape)) +>+<+:p) =(%ui +>-<:p))
+++  is-uv
+  |=  =tape
+  ^-  ?
+  =/  p  (bisk:so [[1 1] tape])
+  &(=(+((lent tape)) +>+<+:p) =(%uv +>-<:p))
+++  is-uw
+  |=  =tape
+  ^-  ?
+  =/  p  (bisk:so [[1 1] tape])
+  &(=(+((lent tape)) +>+<+:p) =(%uw +>-<:p))
+++  is-ux
+  |=  =tape
+  ^-  ?
+  =/  p  (bisk:so [[1 1] tape])
+  &(=(+((lent tape)) +>+<+:p) =(%ux +>-<:p))
 ::
 ::  Convert the string to all upper case.  Synonymous with ++cuss.
 ++  upper  cuss
