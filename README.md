@@ -22,7 +22,7 @@ What we do have:
 #### Source
 
 ```hoon
-`tape`(weld (gulf 65 90) (gulf 97 122))
+^~  `tape`(weld (gulf 65 90) (gulf 97 122))
 ```
 
 #### Produces
@@ -40,7 +40,7 @@ A tape.
 #### Source
 
 ```hoon
-`tape`(weld alphabet digits)
+^~  `tape`(weld alphabet digits)
 ```
 
 #### Produces
@@ -58,7 +58,7 @@ A tape.
 #### Source
 
 ```hoon
-`tape`(slag 26 alphabet)
+^~  `tape`(slag 26 alphabet)
 ```
 
 #### Produces
@@ -76,7 +76,7 @@ A tape.
 #### Source
 
 ```hoon
-`tape`(scag 26 alphabet)
+^~  `tape`(scag 26 alphabet)
 ```
 
 #### Produces
@@ -94,7 +94,7 @@ All printable ASCII characters (not in ASCII order).
 #### Source
 
 ```hoon
-`tape`:(weld alphabet digits punctuation whitespace)
+^~  `tape`:(weld alphabet digits punctuation whitespace)
 ```
 
 #### Produces
@@ -113,7 +113,7 @@ Ten decimal digits.
 #### Source
 
 ```hoon
-`tape`(gulf 48 57)
+^~  `tape`(gulf 48 57)
 ```
 
 #### Produces
@@ -132,7 +132,7 @@ Sixteen hexadecimal digits, upper case and lower case.
 #### Source
 
 ```hoon
-`tape`:(weld digits (gulf 65 70) (gulf 97 102))
+^~  `tape`:(weld digits (gulf 65 70) (gulf 97 102))
 ```
 
 #### Produces
@@ -150,7 +150,7 @@ Eight octal digits.
 #### Source
 
 ```hoon
-`tape`(gulf 48 55)
+^~  `tape`(gulf 48 55)
 ```
 
 #### Produces
@@ -168,7 +168,7 @@ All printable ASCII characters (not in ASCII order).
 #### Source
 
 ```hoon
-`tape`:(weld alphabet digits punctuation whitespace)
+^~  `tape`:(weld alphabet digits punctuation whitespace)
 ```
 
 #### Produces
@@ -186,7 +186,7 @@ All printable ASCII characters (not in ASCII order).
 #### Source
 
 ```hoon
-`tape`:(weld alphabet digits punctuation whitespace)
+^~  `tape`:(weld alphabet digits punctuation whitespace)
 ```
 
 #### Produces
@@ -208,7 +208,7 @@ A tape.
 #### Source
 
 ```hoon
-`tape`(weld (gulf 65 90) (gulf 97 122))
+^~  `tape`(weld (gulf 65 90) (gulf 97 122))
 ```
 
 #### Produces
@@ -226,7 +226,7 @@ A `(set @tD)`.
 #### Source
 
 ```hoon
-`tape`(weld alphabet digits)
+^~  `tape`(weld alphabet digits)
 ```
 
 #### Produces
@@ -244,7 +244,7 @@ A `(set @tD)`.
 #### Source
 
 ```hoon
-`tape`(slag 26 alphabet)
+^~  `tape`(slag 26 alphabet)
 ```
 
 #### Produces
@@ -262,7 +262,7 @@ A `(set @tD)`.
 #### Source
 
 ```hoon
-`tape`(scag 26 alphabet)
+^~  `tape`(scag 26 alphabet)
 ```
 
 #### Produces
@@ -280,7 +280,7 @@ All printable ASCII characters (not in ASCII order).
 #### Source
 
 ```hoon
-`tape`:(weld alphabet digits punctuation whitespace)
+^~  `tape`:(weld alphabet digits punctuation whitespace)
 ```
 
 #### Produces
@@ -299,7 +299,7 @@ Ten decimal digits.
 #### Source
 
 ```hoon
-`tape`(gulf 48 57)
+^~  `tape`(gulf 48 57)
 ```
 
 #### Produces
@@ -318,7 +318,7 @@ Sixteen hexadecimal digits, upper case and lower case.
 #### Source
 
 ```hoon
-`tape`:(weld digits (gulf 65 70) (gulf 97 102))
+^~  `tape`:(weld digits (gulf 65 70) (gulf 97 102))
 ```
 
 #### Produces
@@ -336,7 +336,7 @@ Eight octal digits.
 #### Source
 
 ```hoon
-`tape`(gulf 48 55)
+^~  `tape`(gulf 48 55)
 ```
 
 #### Produces
@@ -354,7 +354,7 @@ Standard ASCII punctuation characters.
 #### Source
 
 ```hoon
-`tape`:(weld (gulf 33 47) (gulf 58 64) (gulf 91 96) (gulf 123 126))
+^~  `tape`:(weld (gulf 33 47) (gulf 58 64) (gulf 91 96) (gulf 123 126))
 ```
 
 #### Produces
@@ -372,7 +372,7 @@ Standard ASCII whitespace characters (space, newline, horizontal tab).
 #### Source
 
 ```hoon
-`tape`:(weld " " ~['\0a'] ~['\09'])
+^~  `tape`:(weld " " ~['\0a'] ~['\09'])
 ```
 
 #### Produces
