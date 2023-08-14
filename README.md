@@ -425,6 +425,20 @@ Tests whether all characters in a tape are from the printable ASCII character se
 
 A loobean (`?`).
 
+##  `++is-knot`
+
+Tests whether a tape is a valid `@ta` label.
+
+#### Source
+
+```hoon
+|=(=tape ((sane %ta) (crip tape)))
+```
+
+#### Produces
+
+A loobean (`?`).
+
 ##  `++is-decimal`
 
 Tests whether all characters in a tape are ASCII decimal digits.
@@ -527,6 +541,36 @@ Tests whether all characters in a tape are ASCII whitespace characters.
 
 A loobean (`?`).
 
+##  `++is-ta`
+
+Tests whether a tape is a valid `@ta` label.
+
+#### Source
+
+```hoon
+is-cord
+```
+
+#### Produces
+
+A loobean (`?`).
+
+##  `++is-tas`
+
+Tests whether a tape is a valid `@tas` label.
+
+Alias for `++is-term`.
+
+#### Source
+
+```hoon
+is-term
+```
+
+#### Produces
+
+A loobean (`?`).
+
 ##  `++is-term`
 
 Tests whether a tape is a valid `@tas` label.
@@ -555,6 +599,57 @@ Tests whether a tape is title case.
 
 A loobean (`?`).
 
+##  `++is-uc`
+
+Tests whether a tape is a valid `@uc` value.
+
+#### Source
+
+```hoon
+|=  =tape
+^-  ?
+=/  p  (bisk:so [[1 1] tape])
+&(=(+((lent tape)) +>+<+:p) =(%uc +>-<:p))
+```
+
+#### Produces
+
+A loobean (`?`).
+
+##  `++is-ud`
+
+Tests whether a tape is a valid `@ud` value.
+
+#### Source
+
+```hoon
+|=  =tape
+^-  ?
+=/  p  (bisk:so [[1 1] tape])
+&(=(+((lent tape)) +>+<+:p) =(%ud +>-<:p))
+```
+
+#### Produces
+
+A loobean (`?`).
+
+##  `++is-ui`
+
+Tests whether a tape is a valid `@ui` value.
+
+#### Source
+
+```hoon
+|=  =tape
+^-  ?
+=/  p  (bisk:so [[1 1] tape])
+&(=(+((lent tape)) +>+<+:p) =(%ui +>-<:p))
+```
+
+#### Produces
+
+A loobean (`?`).
+
 ##  `++is-upper`
 
 Tests whether all characters in a tape are from the upper case ASCII alphabet.
@@ -563,6 +658,57 @@ Tests whether all characters in a tape are from the upper case ASCII alphabet.
 
 ```hoon
 |=(=tape =(~ (~(dif in (~(gas in *(set @tD)) tape)) set-alpha-upper)))
+```
+
+#### Produces
+
+A loobean (`?`).
+
+##  `++is-uv`
+
+Tests whether a tape is a valid `@uv` value.
+
+#### Source
+
+```hoon
+|=  =tape
+^-  ?
+=/  p  (bisk:so [[1 1] tape])
+&(=(+((lent tape)) +>+<+:p) =(%uv +>-<:p))
+```
+
+#### Produces
+
+A loobean (`?`).
+
+##  `++is-uw`
+
+Tests whether a tape is a valid `@uw` value.
+
+#### Source
+
+```hoon
+|=  =tape
+^-  ?
+=/  p  (bisk:so [[1 1] tape])
+&(=(+((lent tape)) +>+<+:p) =(%uw +>-<:p))
+```
+
+#### Produces
+
+A loobean (`?`).
+
+##  `++is-ux`
+
+Tests whether a tape is a valid `@ux` value.
+
+#### Source
+
+```hoon
+|=  =tape
+^-  ?
+=/  p  (bisk:so [[1 1] tape])
+&(=(+((lent tape)) +>+<+:p) =(%ux +>-<:p))
 ```
 
 #### Produces
