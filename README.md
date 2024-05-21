@@ -159,7 +159,7 @@ A tape.
 
 ##  `++punctuation`     `tape`:(weld (gulf 32 47) (gulf 58 64) (gulf 91 96) (gulf 123 126))
 
-All printable ASCII characters (not in ASCII order).
+All ASCII punctuation characters.
 
 ```
 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`\{|}~ \0a\09"
@@ -177,7 +177,7 @@ A tape.
 
 ##  `++whitespace`      `tape`:(weld " " ~['\0a'] ~['\09'])
 
-All printable ASCII characters (not in ASCII order).
+All ASCII whitespace characters.
 
 ```
 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`\{|}~ \0a\09"
@@ -271,7 +271,7 @@ A `(set @tD)`.
 
 ##  `++set-ascii`
 
-All printable ASCII characters (not in ASCII order).
+All printable ASCII characters.
 
 ```hoon
 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`\{|}~ \0a\09"
