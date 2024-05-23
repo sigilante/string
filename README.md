@@ -1,5 +1,7 @@
 #   `/lib/string`
 
+**Status ~2024.5.23:  PRed to be shipped in `%base` with the standard Urbit release.**
+
 A string library for mortals.
 
 `/lib/string` implements a set of userspace functions for string manipulation adopting
